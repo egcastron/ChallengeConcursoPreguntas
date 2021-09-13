@@ -24,7 +24,7 @@ public class InterfazGrafica3 extends JFrame {
         tfPreg_max.setFont(new Font("Arial Black", Font.BOLD, 14));
 
         lNombre = new JLabel("Nombre:");
-        lPremio = new JLabel("Premio:");
+        lPremio = new JLabel("Premio: $$");
         lPreg_max = new JLabel("Preg_max:");
 
         bIngresar = new JButton("Guardar datos Participante");

@@ -42,7 +42,7 @@ public class InterfazGrafica extends JFrame{
 
 
         lNumPreg = new JLabel("# Pregunta:");
-        lAreaPremio = new JLabel("Premio Acumulado:");
+        lAreaPremio = new JLabel("Premio Acumulado $$:");
 
 
         bMostrar = new JButton("INICIAR JUEGO");
@@ -197,21 +197,21 @@ public class InterfazGrafica extends JFrame{
 
     public void mensajeEnArea(String unaPregunta){
 
-        if(unaPregunta == "END"){
-            InterfazGrafica3 miInter = new InterfazGrafica3();
-            setbIngresar(miInter.getbIngresar());
-            miInter.setTfPreg_max(getAreaNumPreg());
-            miInter.setTfPremio(getAreaPremio());
-            areaNombre.setText(miInter.getTfNombre());
-
-        }else if(unaPregunta == "FAIL"){
-            InterfazGrafica3 miInter = new InterfazGrafica3();
-            setbIngresar(miInter.getbIngresar());
-            miInter.setTfPreg_max(getAreaNumPreg());
-            miInter.setTfPremio("$0");
-            areaNombre.setText(miInter.getTfNombre());
-
-        }else {
+//        if(unaPregunta == "END"){
+//            InterfazGrafica3 miInter = new InterfazGrafica3();
+//            setbIngresar(miInter.getbIngresar());
+//            miInter.setTfPreg_max(getAreaNumPreg());
+//            miInter.setTfPremio(getAreaPremio());
+//            areaNombre.setText(miInter.getTfNombre());
+//
+//        }else if(unaPregunta == "FAIL"){
+//            InterfazGrafica3 miInter = new InterfazGrafica3();
+//            setbIngresar(miInter.getbIngresar());
+//            miInter.setTfPreg_max(getAreaNumPreg());
+//            miInter.setTfPremio("0");
+//            areaNombre.setText(miInter.getTfNombre());
+//
+//        }else {
             String[] resultados = unaPregunta.split("_,");
             codigoActual = Integer.parseInt(resultados[0]);
             listaCodigos.add(Integer.parseInt(resultados[0]));
@@ -224,21 +224,21 @@ public class InterfazGrafica extends JFrame{
             respuestaCorrecta = resultados[6];
             areaNumPreg.setText(""+listaCodigos.size());
             if(listaCodigos.size()>0 && listaCodigos.size()<=5){
-                areaPremio.setText("$0");
+                areaPremio.setText("0");
             }else if(listaCodigos.size()>5 && listaCodigos.size()<=10){
-                areaPremio.setText("$1.000.000");
+                areaPremio.setText("1000000");
             }else if(listaCodigos.size()>10 && listaCodigos.size()<=15){
-                areaPremio.setText("$5.000.000");
+                areaPremio.setText("5000000");
             }else if(listaCodigos.size()>15 && listaCodigos.size()<=20){
-                areaPremio.setText("$10.000.000");
+                areaPremio.setText("10000000");
             }else if(listaCodigos.size()>20 && listaCodigos.size()<=24){
-                areaPremio.setText("$20.000.000");
+                areaPremio.setText("20000000");
             }else if(listaCodigos.size()==25){
-                areaPremio.setText("$50.000.000");
+                areaPremio.setText("50000000");
             }
 
 
-        }
+//        }
 
     }
 
