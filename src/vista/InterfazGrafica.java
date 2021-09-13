@@ -8,10 +8,6 @@ import java.util.ArrayList;
 
 public class InterfazGrafica extends JFrame{
 
-
-
-
-
     JButton bMostrar, bRespA, bRespB, bRespC, bRespD, bRetiro;
     JPanel pBotones, pPregunta, pRespuestas, pJuego, pDatos;
     JTextArea areaPreg, areaRespA, areaRespB, areaRespC, areaRespD, areaNumPreg, areaPremio, areaNombre;
@@ -28,19 +24,19 @@ public class InterfazGrafica extends JFrame{
         areaPreg.setEditable(false);
 
         areaRespA = new JTextArea(1,15);
-        areaRespA.setFont(new Font("Arial Black", Font.BOLD, 14));
+        areaRespA.setFont(new Font("SansSerif", Font.PLAIN, 14));
         areaRespA.setEditable(false);
 
         areaRespB = new JTextArea(1,15);
-        areaRespB.setFont(new Font("Arial Black", Font.BOLD, 14));
+        areaRespB.setFont(new Font("SansSerif", Font.PLAIN, 14));
         areaRespB.setEditable(false);
 
         areaRespC = new JTextArea(1,15);
-        areaRespC.setFont(new Font("Arial Black", Font.BOLD, 14));
+        areaRespC.setFont(new Font("SansSerif", Font.PLAIN, 14));
         areaRespC.setEditable(false);
 
         areaRespD = new JTextArea(1,15);
-        areaRespD.setFont(new Font("Arial Black", Font.BOLD, 14));
+        areaRespD.setFont(new Font("SansSerif", Font.PLAIN, 14));
         areaRespD.setEditable(false);
 
         areaNumPreg = new JTextArea(1,5);
@@ -50,12 +46,10 @@ public class InterfazGrafica extends JFrame{
         areaPremio = new JTextArea(1,5);
         areaPremio.setFont(new Font("Arial Black", Font.BOLD, 14));
         areaPremio.setEditable(false);
-//        areaNombre = new JTextArea(1, 10);
 
 
         lNumPreg = new JLabel("# Pregunta:");
         lAreaPremio = new JLabel("Premio Acumulado $$:");
-
 
         bMostrar = new JButton("INICIAR JUEGO");
         bRetiro = new JButton("RETIRARME");
@@ -63,7 +57,6 @@ public class InterfazGrafica extends JFrame{
         bRespB = new JButton("B");
         bRespC = new JButton("C");
         bRespD = new JButton("D");
-//        bIngresar = new JButton();
 
         pBotones = new JPanel();
         pJuego = new JPanel();
@@ -107,15 +100,11 @@ public class InterfazGrafica extends JFrame{
         add(pJuego, BorderLayout.CENTER);
         add(pBotones, BorderLayout.EAST);
         add(pDatos, BorderLayout.WEST);
-
-
-
     }
 
 
     //mi constructor:
     public InterfazGrafica(){
-
         super("Quien quiere ser millonario");
         initComponents();
 
@@ -123,8 +112,6 @@ public class InterfazGrafica extends JFrame{
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocation(400,400);
         pack();
-
-
     }
 
 
@@ -137,15 +124,6 @@ public class InterfazGrafica extends JFrame{
     public JButton getbRetiro() {
         return bRetiro;
     }
-
-
-//    public JButton getbIngresar(){
-//        return bIngresar;
-//    }
-//
-//    public void setbIngresar(JButton bIngresar) {
-//        this.bIngresar = bIngresar;
-//    }
 
     public JButton getbRespA() {
         return bRespA;
@@ -162,8 +140,6 @@ public class InterfazGrafica extends JFrame{
     public JButton getbRespD() {
         return bRespD;
     }
-
-
 
 
     public String getAreaRespA(){
@@ -190,9 +166,6 @@ public class InterfazGrafica extends JFrame{
         return areaPremio.getText().trim();
     }
 
-//    public String getAreaNombre(){
-//        return areaNombre.getText().trim();
-//    }
 
     public String getRespuestaCorrecta() {
         return respuestaCorrecta;
@@ -209,25 +182,9 @@ public class InterfazGrafica extends JFrame{
 
     public void mensajeEnArea(String unaPregunta){
 
-//        if(unaPregunta == "END"){
-//            InterfazGrafica3 miInter = new InterfazGrafica3();
-//            setbIngresar(miInter.getbIngresar());
-//            miInter.setTfPreg_max(getAreaNumPreg());
-//            miInter.setTfPremio(getAreaPremio());
-//            areaNombre.setText(miInter.getTfNombre());
-//
-//        }else if(unaPregunta == "FAIL"){
-//            InterfazGrafica3 miInter = new InterfazGrafica3();
-//            setbIngresar(miInter.getbIngresar());
-//            miInter.setTfPreg_max(getAreaNumPreg());
-//            miInter.setTfPremio("0");
-//            areaNombre.setText(miInter.getTfNombre());
-//
-//        }else {
             String[] resultados = unaPregunta.split("_,");
             codigoActual = Integer.parseInt(resultados[0]);
             listaCodigos.add(Integer.parseInt(resultados[0]));
-            System.out.println(listaCodigos);
             areaPreg.setText(resultados[1]);
             areaRespA.setText(resultados[2]);
             areaRespB.setText(resultados[3]);
@@ -249,10 +206,6 @@ public class InterfazGrafica extends JFrame{
             }else if(listaCodigos.size()==25){
                 areaPremio.setText("50000000");
             }
-
-
-//        }
-
     }
 
     public void asignarEscuchas(ActionListener evento) {
@@ -261,10 +214,6 @@ public class InterfazGrafica extends JFrame{
         bRespB.addActionListener(evento);
         bRespC.addActionListener(evento);
         bRespD.addActionListener(evento);
-//        bIngresar.addActionListener(evento);
         bRetiro.addActionListener(evento);
     }
-
-
-
 }

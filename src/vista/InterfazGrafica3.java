@@ -1,6 +1,5 @@
 package vista;
 
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
@@ -98,6 +97,4 @@ public class InterfazGrafica3 extends JFrame {
     public void asignarEscuchas3(ActionListener evento){
         bIngresar.addActionListener(evento);
     }
-
-
 }

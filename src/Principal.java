@@ -1,5 +1,3 @@
-
-
 import controlador.Controlador;
 import modelo.AccionesEnDB;
 import modelo.Validador;
@@ -14,7 +12,5 @@ public class Principal {
         AccionesEnDB modelo = new AccionesEnDB();
         Validador valid = new Validador();
         Controlador controlador = new Controlador(vista, vista3, modelo, valid);
-
-
     }
 }

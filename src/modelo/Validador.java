@@ -12,7 +12,6 @@ public class Validador {
         }else {
             iguales = false;
         }
-        System.out.println("iguales?:"+iguales);
         return iguales;
     }
 

@@ -24,12 +24,10 @@ public class Controlador implements ActionListener {
         this.vista.asignarEscuchas(this);
         this.vista3.asignarEscuchas3(this);
         this.valid = valid;
-
     }
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-
 
         if(actionEvent.getSource() == vista3.getbIngresar()){
             String nombre = vista3.getTfNombre();
@@ -62,7 +60,6 @@ public class Controlador implements ActionListener {
         if(actionEvent.getSource() == vista.getbRespB()){
             String respuesta = vista.getAreaRespB();
             accionBoton(respuesta);
-
         }
 
         if(actionEvent.getSource() == vista.getbRespC()){
