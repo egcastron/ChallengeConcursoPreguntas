@@ -24,7 +24,7 @@ public class Validador {
             int result = r.nextInt(high - low) + low;
             return result;
         }else{
-//            ArrayList<Integer> listaCodigos = new ArrayList<>(Arrays.asList(101, 102, 103, 104, 105, 201, 202, 203, 204, 205, 301, 302, 303, 304, 305, 401, 402, 403, 404, 405, 501, 502, 503, 504, 505));
+
             boolean contiene=true;
             if((!(listaCog.contains(101))) || (!(listaCog.contains(102))) || (!(listaCog.contains(103))) || (!(listaCog.contains(104))) || (!(listaCog.contains(105)))) {
                 while(contiene){

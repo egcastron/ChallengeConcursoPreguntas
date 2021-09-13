@@ -33,6 +33,8 @@ public class AccionesEnDB {
 
         if(codigo_pregunta == 0){
             return "END";
+        }else if(codigo_pregunta == 1){
+            return "FAIL";
         }
 
         String registro = "";

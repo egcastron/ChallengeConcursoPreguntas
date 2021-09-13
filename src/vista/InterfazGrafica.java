@@ -204,6 +204,13 @@ public class InterfazGrafica extends JFrame{
             miInter.setTfPremio(getAreaPremio());
             areaNombre.setText(miInter.getTfNombre());
 
+        }else if(unaPregunta == "FAIL"){
+            InterfazGrafica3 miInter = new InterfazGrafica3();
+            setbIngresar(miInter.getbIngresar());
+            miInter.setTfPreg_max(getAreaNumPreg());
+            miInter.setTfPremio("$0");
+            areaNombre.setText(miInter.getTfNombre());
+
         }else {
             String[] resultados = unaPregunta.split("_,");
             codigoActual = Integer.parseInt(resultados[0]);

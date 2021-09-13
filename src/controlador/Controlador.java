@@ -37,7 +37,6 @@ public class Controlador implements ActionListener {
         if(actionEvent.getSource() == vista.getbMostrar()){
             ArrayList<Integer> listaCodig = vista.getListaCodigos();
             String pregunta = modelo.obtenerPregunta(valid.random(0, listaCodig));
-//            String pregunta = modelo.obtenerPregunta(0);
             vista.mensajeEnArea(pregunta);
         }
 
@@ -45,8 +44,6 @@ public class Controlador implements ActionListener {
             String pregunta = modelo.obtenerPregunta(0);
             vista.mensajeEnArea(pregunta);
         }
-
-
 
         if(actionEvent.getSource() == vista.getbRespA()){
             String respuesta = vista.getAreaRespA();
@@ -56,6 +53,9 @@ public class Controlador implements ActionListener {
             boolean codigoPregunta = valid.validar(respuesta, respCorrect);
             if(codigoPregunta){
                 String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
+                vista.mensajeEnArea(pregunta);
+            }else {
+                String pregunta = modelo.obtenerPregunta(1);
                 vista.mensajeEnArea(pregunta);
             }
         }
@@ -68,6 +68,9 @@ public class Controlador implements ActionListener {
             boolean codigoPregunta = valid.validar(respuesta, respCorrect);
             if(codigoPregunta){
                 String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
+                vista.mensajeEnArea(pregunta);
+            }else {
+                String pregunta = modelo.obtenerPregunta(1);
                 vista.mensajeEnArea(pregunta);
             }
 
@@ -82,6 +85,9 @@ public class Controlador implements ActionListener {
             if(codigoPregunta){
                 String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
                 vista.mensajeEnArea(pregunta);
+            }else {
+                String pregunta = modelo.obtenerPregunta(1);
+                vista.mensajeEnArea(pregunta);
             }
         }
 
@@ -93,6 +99,9 @@ public class Controlador implements ActionListener {
             boolean codigoPregunta = valid.validar(respuesta, respCorrect);
             if(codigoPregunta){
                 String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
+                vista.mensajeEnArea(pregunta);
+            }else {
+                String pregunta = modelo.obtenerPregunta(1);
                 vista.mensajeEnArea(pregunta);
             }
         }

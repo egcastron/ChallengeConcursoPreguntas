@@ -18,8 +18,10 @@ public class InterfazGrafica3 extends JFrame {
         areaPregunt.setFont(new Font("Arial Black", Font.BOLD, 14));
 
         tfNombre = new JTextField(10);
-        tfPremio = new JTextArea(2,10);
+        tfPremio = new JTextArea(2,15);
+        tfPremio.setFont(new Font("Arial Black", Font.BOLD, 14));
         tfPreg_max = new JTextArea(2,10);
+        tfPreg_max.setFont(new Font("Arial Black", Font.BOLD, 14));
 
         lNombre = new JLabel("Nombre:");
         lPremio = new JLabel("Premio:");
