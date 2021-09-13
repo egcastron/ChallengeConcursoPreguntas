@@ -12,7 +12,7 @@ public class InterfazGrafica extends JFrame{
 
 
 
-    JButton bMostrar, bRespA, bRespB, bRespC, bRespD, bIngresar;
+    JButton bMostrar, bRespA, bRespB, bRespC, bRespD, bIngresar, bRetiro;
     JPanel pBotones, pPregunta, pRespuestas, pJuego, pDatos;
     JTextArea areaPreg, areaRespA, areaRespB, areaRespC, areaRespD, areaNumPreg, areaPremio, areaNombre;
     JLabel lNumPreg, lAreaPremio;
@@ -46,6 +46,7 @@ public class InterfazGrafica extends JFrame{
 
 
         bMostrar = new JButton("INICIAR JUEGO");
+        bRetiro = new JButton("RETIRARME");
         bRespA = new JButton("A");
         bRespB = new JButton("B");
         bRespC = new JButton("C");
@@ -60,12 +61,13 @@ public class InterfazGrafica extends JFrame{
 
         //                             (fila, columna, hspace, vspace)
 
-        pBotones.setLayout(new GridLayout(1,1,2,2));
+        pBotones.setLayout(new GridLayout(2,1,2,2));
         pRespuestas.setLayout(new GridLayout(2,4,8,25));
         pDatos.setLayout(new GridLayout(2,2,2,4));
 
 
         pBotones.add(bMostrar);
+        pBotones.add(bRetiro);
         pBotones.setBorder(BorderFactory.createTitledBorder(""));
 
         pPregunta.add(areaPreg);
@@ -119,6 +121,11 @@ public class InterfazGrafica extends JFrame{
     public JButton getbMostrar() {
         return bMostrar;
     }
+
+    public JButton getbRetiro() {
+        return bRetiro;
+    }
+
 
     public JButton getbIngresar(){
         return bIngresar;
@@ -235,6 +242,7 @@ public class InterfazGrafica extends JFrame{
         bRespC.addActionListener(evento);
         bRespD.addActionListener(evento);
         bIngresar.addActionListener(evento);
+        bRetiro.addActionListener(evento);
     }
 
 

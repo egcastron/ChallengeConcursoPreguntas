@@ -41,6 +41,13 @@ public class Controlador implements ActionListener {
             vista.mensajeEnArea(pregunta);
         }
 
+        if(actionEvent.getSource() == vista.getbRetiro()){
+            String pregunta = modelo.obtenerPregunta(0);
+            vista.mensajeEnArea(pregunta);
+        }
+
+
+
         if(actionEvent.getSource() == vista.getbRespA()){
             String respuesta = vista.getAreaRespA();
             String respCorrect = vista.getRespuestaCorrecta();
