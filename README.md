@@ -1,10 +1,10 @@
 # ChallengeConcursoPreguntas
 Juego 25 preguntas con respuesta múltiple en Java con Swing y usando jdbc para MySQL.
 
-####Descripción:
+### Descripción:
 Programa hecho en entorno IntelliJ IDEA con conexión a base de datos localhost PHPMyAdmin en servidor WampServer, enfocado a modelo MVC, con biblioteca de interfaz gráfica Swing.
 
-####Despliegue:
+### Despliegue:
 Tras clonar, usar en RDBMS MySQL ya que se proporciona el .jar para conexión con JDBC.
 En IntelliJ IDEA añadir al proyecto el .jar en
 
