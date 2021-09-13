@@ -13,3 +13,5 @@ _File>Project Structure>Modules>Dependencies>Add>>JARs._
 Configuración de URL servidor, user y password en archivo *ConectandoBD.java*
 
 Si se usa NetBeans agregar el .jar al paquete Libraries del proyecto.
+
+Para crear la base de datos necesaria, se proporciona el scrip en el archivo *DB_script.sql*
