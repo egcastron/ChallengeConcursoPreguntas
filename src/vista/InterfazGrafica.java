@@ -12,7 +12,7 @@ public class InterfazGrafica extends JFrame{
 
 
 
-    JButton bMostrar, bRespA, bRespB, bRespC, bRespD, bIngresar, bRetiro;
+    JButton bMostrar, bRespA, bRespB, bRespC, bRespD, bRetiro;
     JPanel pBotones, pPregunta, pRespuestas, pJuego, pDatos;
     JTextArea areaPreg, areaRespA, areaRespB, areaRespC, areaRespD, areaNumPreg, areaPremio, areaNombre;
     JLabel lNumPreg, lAreaPremio;
@@ -25,20 +25,32 @@ public class InterfazGrafica extends JFrame{
 
         areaPreg = new JTextArea(1,10);
         areaPreg.setFont(new Font("Arial Black", Font.BOLD, 14));
+        areaPreg.setEditable(false);
+
         areaRespA = new JTextArea(1,15);
         areaRespA.setFont(new Font("Arial Black", Font.BOLD, 14));
-        areaRespA.setComponentOrientation(ComponentOrientation.UNKNOWN);
+        areaRespA.setEditable(false);
+
         areaRespB = new JTextArea(1,15);
         areaRespB.setFont(new Font("Arial Black", Font.BOLD, 14));
+        areaRespB.setEditable(false);
+
         areaRespC = new JTextArea(1,15);
         areaRespC.setFont(new Font("Arial Black", Font.BOLD, 14));
+        areaRespC.setEditable(false);
+
         areaRespD = new JTextArea(1,15);
         areaRespD.setFont(new Font("Arial Black", Font.BOLD, 14));
+        areaRespD.setEditable(false);
+
         areaNumPreg = new JTextArea(1,5);
         areaNumPreg.setFont(new Font("Arial Black", Font.BOLD, 14));
+        areaNumPreg.setEditable(false);
+
         areaPremio = new JTextArea(1,5);
         areaPremio.setFont(new Font("Arial Black", Font.BOLD, 14));
-        areaNombre = new JTextArea(1, 10);
+        areaPremio.setEditable(false);
+//        areaNombre = new JTextArea(1, 10);
 
 
         lNumPreg = new JLabel("# Pregunta:");
@@ -51,7 +63,7 @@ public class InterfazGrafica extends JFrame{
         bRespB = new JButton("B");
         bRespC = new JButton("C");
         bRespD = new JButton("D");
-        bIngresar = new JButton();
+//        bIngresar = new JButton();
 
         pBotones = new JPanel();
         pJuego = new JPanel();
@@ -127,13 +139,13 @@ public class InterfazGrafica extends JFrame{
     }
 
 
-    public JButton getbIngresar(){
-        return bIngresar;
-    }
-
-    public void setbIngresar(JButton bIngresar) {
-        this.bIngresar = bIngresar;
-    }
+//    public JButton getbIngresar(){
+//        return bIngresar;
+//    }
+//
+//    public void setbIngresar(JButton bIngresar) {
+//        this.bIngresar = bIngresar;
+//    }
 
     public JButton getbRespA() {
         return bRespA;
@@ -178,9 +190,9 @@ public class InterfazGrafica extends JFrame{
         return areaPremio.getText().trim();
     }
 
-    public String getAreaNombre(){
-        return areaNombre.getText().trim();
-    }
+//    public String getAreaNombre(){
+//        return areaNombre.getText().trim();
+//    }
 
     public String getRespuestaCorrecta() {
         return respuestaCorrecta;
@@ -223,6 +235,7 @@ public class InterfazGrafica extends JFrame{
             areaRespD.setText(resultados[5]);
             respuestaCorrecta = resultados[6];
             areaNumPreg.setText(""+listaCodigos.size());
+
             if(listaCodigos.size()>0 && listaCodigos.size()<=5){
                 areaPremio.setText("0");
             }else if(listaCodigos.size()>5 && listaCodigos.size()<=10){
@@ -248,7 +261,7 @@ public class InterfazGrafica extends JFrame{
         bRespB.addActionListener(evento);
         bRespC.addActionListener(evento);
         bRespD.addActionListener(evento);
-        bIngresar.addActionListener(evento);
+//        bIngresar.addActionListener(evento);
         bRetiro.addActionListener(evento);
     }
 

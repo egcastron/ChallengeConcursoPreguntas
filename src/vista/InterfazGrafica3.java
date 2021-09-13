@@ -15,23 +15,30 @@ public class InterfazGrafica3 extends JFrame {
 
     public void initComponents(){
         areaPregunt = new JTextArea(2,15);
-        areaPregunt.setFont(new Font("Arial Black", Font.BOLD, 14));
+        areaPregunt.setFont(new Font("Arial Black", Font.BOLD, 15));
 
         tfNombre = new JTextField(10);
+
         tfPremio = new JTextArea(2,15);
-        tfPremio.setFont(new Font("Arial Black", Font.BOLD, 14));
+        tfPremio.setFont(new Font("Arial Black", Font.BOLD, 17));
+        tfPremio.setEditable(false);
+
         tfPreg_max = new JTextArea(2,10);
-        tfPreg_max.setFont(new Font("Arial Black", Font.BOLD, 14));
+        tfPreg_max.setFont(new Font("Arial Black", Font.BOLD, 17));
+        tfPreg_max.setEditable(false);
 
         lNombre = new JLabel("Nombre:");
+        lNombre.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         lPremio = new JLabel("Premio: $$");
+        lPremio.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         lPreg_max = new JLabel("Preg_max:");
+        lPreg_max.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
 
         bIngresar = new JButton("Guardar datos Participante");
 
 
         pDatos = new JPanel();
-        pDatos.setLayout(new GridLayout(3,2,2,2));
+        pDatos.setLayout(new GridLayout(3,2,40,2));
         pMensaje = new JPanel();
         pBotones = new JPanel();
 
@@ -46,6 +53,7 @@ public class InterfazGrafica3 extends JFrame {
 
 
         areaPregunt.setText("Ha terminado el juego!!!");
+        areaPregunt.setEditable(false);
 
         setLayout(new BorderLayout());
         add(pDatos, BorderLayout.CENTER);
@@ -58,8 +66,8 @@ public class InterfazGrafica3 extends JFrame {
         initComponents();
         setVisible(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setLocation(400,400);
-        setSize(1100, 250);
+        setLocation(700,400);
+        setSize(700, 250);
     }
 
 

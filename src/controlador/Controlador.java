@@ -52,111 +52,50 @@ public class Controlador implements ActionListener {
                 vista3.setTfPreg_max(vista.getAreaNumPreg());
                 vista3.setTfPremio(vista.getAreaPremio());
             }
-//            vista.mensajeEnArea(pregunta);
         }
 
         if(actionEvent.getSource() == vista.getbRespA()){
             String respuesta = vista.getAreaRespA();
-            String respCorrect = vista.getRespuestaCorrecta();
-            int codActual = vista.getCodigoActual();
-            ArrayList<Integer> listaCodig = vista.getListaCodigos();
-            boolean codigoPregunta = valid.validar(respuesta, respCorrect);
-            if(codigoPregunta){
-                String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
-                if(pregunta == "END"){
-                    vista3.setVisible(true);
-                    vista3.setTfPreg_max(vista.getAreaNumPreg());
-                    vista3.setTfPremio(vista.getAreaPremio());
-                }else{
-                    vista.mensajeEnArea(pregunta);
-                }
-            }else {
-                String pregunta = modelo.obtenerPregunta(1);
-                if(pregunta == "FAIL"){
-                    vista3.setVisible(true);
-                    vista3.setTfPreg_max(vista.getAreaNumPreg());
-                    vista3.setTfPremio("0");
-                }
-//                vista.mensajeEnArea(pregunta);
-            }
+            accionBoton(respuesta);
         }
 
         if(actionEvent.getSource() == vista.getbRespB()){
             String respuesta = vista.getAreaRespB();
-            String respCorrect = vista.getRespuestaCorrecta();
-            int codActual = vista.getCodigoActual();
-            ArrayList<Integer> listaCodig = vista.getListaCodigos();
-            boolean codigoPregunta = valid.validar(respuesta, respCorrect);
-            if(codigoPregunta){
-                String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
-                if(pregunta == "END"){
-                    vista3.setVisible(true);
-                    vista3.setTfPreg_max(vista.getAreaNumPreg());
-                    vista3.setTfPremio(vista.getAreaPremio());
-                }else{
-                    vista.mensajeEnArea(pregunta);
-                }
-            }else  {
-                String pregunta = modelo.obtenerPregunta(1);
-                if(pregunta == "FAIL"){
-                    vista3.setVisible(true);
-                    vista3.setTfPreg_max(vista.getAreaNumPreg());
-                    vista3.setTfPremio("0");
-                }
-//                vista.mensajeEnArea(pregunta);
-            }
+            accionBoton(respuesta);
 
         }
 
         if(actionEvent.getSource() == vista.getbRespC()){
             String respuesta = vista.getAreaRespC();
-            String respCorrect = vista.getRespuestaCorrecta();
-            int codActual = vista.getCodigoActual();
-            ArrayList<Integer> listaCodig = vista.getListaCodigos();
-            boolean codigoPregunta = valid.validar(respuesta, respCorrect);
-            if(codigoPregunta){
-                String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
-                if(pregunta == "END"){
-                    vista3.setVisible(true);
-                    vista3.setTfPreg_max(vista.getAreaNumPreg());
-                    vista3.setTfPremio(vista.getAreaPremio());
-                }else{
-                    vista.mensajeEnArea(pregunta);
-                }
-            }else  {
-                String pregunta = modelo.obtenerPregunta(1);
-                if(pregunta == "FAIL"){
-                    vista3.setVisible(true);
-                    vista3.setTfPreg_max(vista.getAreaNumPreg());
-                    vista3.setTfPremio("0");
-                }
-//                vista.mensajeEnArea(pregunta);
-            }
+            accionBoton(respuesta);
         }
 
         if(actionEvent.getSource() == vista.getbRespD()){
             String respuesta = vista.getAreaRespD();
-            String respCorrect = vista.getRespuestaCorrecta();
-            int codActual = vista.getCodigoActual();
-            ArrayList<Integer> listaCodig = vista.getListaCodigos();
-            boolean codigoPregunta = valid.validar(respuesta, respCorrect);
-            if(codigoPregunta){
-                String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
-                if(pregunta == "END"){
-                    vista3.setVisible(true);
-                    vista3.setTfPreg_max(vista.getAreaNumPreg());
-                    vista3.setTfPremio(vista.getAreaPremio());
-                }else{
-                    vista.mensajeEnArea(pregunta);
-                }
-            }else  {
-                String pregunta = modelo.obtenerPregunta(1);
-                if(pregunta == "FAIL"){
-                    vista3.setVisible(true);
-                    vista3.setTfPreg_max(vista.getAreaNumPreg());
-                    vista3.setTfPremio("0");
-                }
-//                vista.mensajeEnArea(pregunta);
+            accionBoton(respuesta);
+        }
+    }
+
+    public void accionBoton(String respuesta) {
+        String respCorrect = vista.getRespuestaCorrecta();
+        int codActual = vista.getCodigoActual();
+        ArrayList<Integer> listaCodig = vista.getListaCodigos();
+        boolean codigoPregunta = valid.validar(respuesta, respCorrect);
+        if(codigoPregunta){
+            String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
+            if(pregunta == "END"){
+                vista3.setVisible(true);
+                vista3.setTfPreg_max(vista.getAreaNumPreg());
+                vista3.setTfPremio(vista.getAreaPremio());
+            }else{
+                vista.mensajeEnArea(pregunta);
+            }
+        }else {
+            String pregunta = modelo.obtenerPregunta(1);
+            if(pregunta == "FAIL"){
+                vista3.setVisible(true);
+                vista3.setTfPreg_max(vista.getAreaNumPreg());
+                vista3.setTfPremio("0");
             }
         }
     }
