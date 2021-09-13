@@ -24,6 +24,7 @@ public class Controlador implements ActionListener {
         this.vista.asignarEscuchas(this);
         this.vista3.asignarEscuchas3(this);
         this.valid = valid;
+
     }
 
     @Override
@@ -32,8 +33,8 @@ public class Controlador implements ActionListener {
 
         if(actionEvent.getSource() == vista3.getbIngresar()){
             String nombre = vista3.getTfNombre();
-            int premio = Integer.parseInt(vista.getAreaPremio());
-            int preg_max = Integer.parseInt(vista.getAreaNumPreg());
+            int premio = Integer.parseInt(vista3.getTfPremio());
+            int preg_max = Integer.parseInt(vista3.getTfPreg_max());
             Participantes unParticipante = new Participantes(nombre, premio, preg_max);
             modelo.ingresarParticipante(unParticipante);
         }
@@ -47,6 +48,7 @@ public class Controlador implements ActionListener {
         if(actionEvent.getSource() == vista.getbRetiro()){
             String pregunta = modelo.obtenerPregunta(0);
             if(pregunta == "END"){
+                vista3.setVisible(true);
                 vista3.setTfPreg_max(vista.getAreaNumPreg());
                 vista3.setTfPremio(vista.getAreaPremio());
             }
@@ -62,6 +64,7 @@ public class Controlador implements ActionListener {
             if(codigoPregunta){
                 String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
                 if(pregunta == "END"){
+                    vista3.setVisible(true);
                     vista3.setTfPreg_max(vista.getAreaNumPreg());
                     vista3.setTfPremio(vista.getAreaPremio());
                 }else{
@@ -70,6 +73,7 @@ public class Controlador implements ActionListener {
             }else {
                 String pregunta = modelo.obtenerPregunta(1);
                 if(pregunta == "FAIL"){
+                    vista3.setVisible(true);
                     vista3.setTfPreg_max(vista.getAreaNumPreg());
                     vista3.setTfPremio("0");
                 }
@@ -86,6 +90,7 @@ public class Controlador implements ActionListener {
             if(codigoPregunta){
                 String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
                 if(pregunta == "END"){
+                    vista3.setVisible(true);
                     vista3.setTfPreg_max(vista.getAreaNumPreg());
                     vista3.setTfPremio(vista.getAreaPremio());
                 }else{
@@ -94,6 +99,7 @@ public class Controlador implements ActionListener {
             }else  {
                 String pregunta = modelo.obtenerPregunta(1);
                 if(pregunta == "FAIL"){
+                    vista3.setVisible(true);
                     vista3.setTfPreg_max(vista.getAreaNumPreg());
                     vista3.setTfPremio("0");
                 }
@@ -111,6 +117,7 @@ public class Controlador implements ActionListener {
             if(codigoPregunta){
                 String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
                 if(pregunta == "END"){
+                    vista3.setVisible(true);
                     vista3.setTfPreg_max(vista.getAreaNumPreg());
                     vista3.setTfPremio(vista.getAreaPremio());
                 }else{
@@ -119,6 +126,7 @@ public class Controlador implements ActionListener {
             }else  {
                 String pregunta = modelo.obtenerPregunta(1);
                 if(pregunta == "FAIL"){
+                    vista3.setVisible(true);
                     vista3.setTfPreg_max(vista.getAreaNumPreg());
                     vista3.setTfPremio("0");
                 }
@@ -135,6 +143,7 @@ public class Controlador implements ActionListener {
             if(codigoPregunta){
                 String pregunta = modelo.obtenerPregunta(valid.random(codActual, listaCodig));
                 if(pregunta == "END"){
+                    vista3.setVisible(true);
                     vista3.setTfPreg_max(vista.getAreaNumPreg());
                     vista3.setTfPremio(vista.getAreaPremio());
                 }else{
@@ -143,6 +152,7 @@ public class Controlador implements ActionListener {
             }else  {
                 String pregunta = modelo.obtenerPregunta(1);
                 if(pregunta == "FAIL"){
+                    vista3.setVisible(true);
                     vista3.setTfPreg_max(vista.getAreaNumPreg());
                     vista3.setTfPremio("0");
                 }

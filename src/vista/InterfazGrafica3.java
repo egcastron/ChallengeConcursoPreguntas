@@ -56,7 +56,7 @@ public class InterfazGrafica3 extends JFrame {
     public InterfazGrafica3(){
         super("Quien quiere ser millonario");
         initComponents();
-        setVisible(true);
+        setVisible(false);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocation(400,400);
         setSize(1100, 250);
@@ -77,6 +77,14 @@ public class InterfazGrafica3 extends JFrame {
 
     public void setTfPreg_max(String tfPreg_max) {
         this.tfPreg_max.setText(tfPreg_max);
+    }
+
+    public String getTfPremio() {
+        return tfPremio.getText().trim();
+    }
+
+    public String getTfPreg_max() {
+        return tfPreg_max.getText().trim();
     }
 
     public void asignarEscuchas3(ActionListener evento){
