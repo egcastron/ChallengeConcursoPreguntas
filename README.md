@@ -6,8 +6,7 @@ Programa hecho en entorno IntelliJ IDEA con conexión a base de datos localhost 
 
 ### Despliegue:
 Tras clonar, usar en RDBMS MySQL ya que se proporciona el .jar para conexión con JDBC.
-En IntelliJ IDEA añadir al proyecto el .jar en
-
+En IntelliJ IDEA añadir al proyecto el .jar en:
 _File>Project Structure>Modules>Dependencies>Add>>JARs._
 
 Configuración de URL servidor, user y password en archivo *ConectandoBD.java*
