@@ -5,6 +5,7 @@ import vista.InterfazGrafica;
 import vista.InterfazGrafica3;
 
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class Controlador implements ActionListener {
             int preg_max = Integer.parseInt(vista3.getTfPreg_max());
             Participantes unParticipante = new Participantes(nombre, premio, preg_max);
             modelo.ingresarParticipante(unParticipante);
+            JOptionPane.showMessageDialog(vista3, "¡Participante guardado con éxito!, cierre el programa","Finalización",JOptionPane.QUESTION_MESSAGE);
         }
 
         if(actionEvent.getSource() == vista.getbMostrar()){

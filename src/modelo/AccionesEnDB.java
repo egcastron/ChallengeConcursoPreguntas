@@ -49,9 +49,7 @@ public class AccionesEnDB {
             if(resultado.next()) {
                 Preguntas unaPregunta = new Preguntas(resultado.getInt(1), resultado.getString(2), resultado.getString(3), resultado.getString(4), resultado.getString(5), resultado.getString(6), resultado.getString(7));
                 registro = unaPregunta.toString();
-                System.out.println(registro);
             }
-
         }catch (SQLException ex){}
 
         return registro;

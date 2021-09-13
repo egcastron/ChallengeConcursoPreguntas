@@ -112,6 +112,7 @@ public class InterfazGrafica extends JFrame{
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setLocation(400,400);
         pack();
+        JOptionPane.showMessageDialog(null, "¡Bienvenido al Juego de Preguntas: Quién quiere ser millonario!, a continuación se enfrentará \na 25 preguntas que tendrán sólo una respuesta correcta, y a medida que avance en los niveles,\n obtendrá un premio mayor; si se retira, obtendrá la ganancia alcanzada, pero si selecciona una \nrespuesta errada, perderá todo el premio. Dé clic en 'INICIAR JUEGO'","Inicio Juego",JOptionPane.QUESTION_MESSAGE);
     }
 
 
